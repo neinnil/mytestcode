@@ -7,9 +7,9 @@
 void _buildInRow(int c, const char *_fchars, const char* _rchars)
 {
 	int _c;
-	printf(_fchars);
+	printf("%s",_fchars);
 	for (_c=1;_c<c; _c++) {
-		printf(_rchars);
+		printf("%s",_rchars);
 	}
 	printf("\n");
 	return;
@@ -45,7 +45,7 @@ int main()
     printf("Test Cases>> %d\n",T);
     for (i=0; i<T; i++) {
         pIter = pRowCols + i;
-        printf("%d %d\n", pIter->R, pIter->C);
+        printf("Case #%d (%d %d)\n", i+1, pIter->R, pIter->C);
         buildPunched(pIter->R, pIter->C);
     }
     pIter = NULL;
