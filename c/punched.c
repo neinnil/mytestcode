@@ -3,37 +3,28 @@
 *******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
+
+void _buildInRow(int c, const char *_fchars, const char* _rchars)
+{
+	int _c;
+	printf(_fchars);
+	for (_c=1;_c<c; _c++) {
+		printf(_rchars);
+	}
+	printf("\n");
+	return;
+}
 void buildPunched(int r, int c) 
 {
     int _r, _c, i, j;
     for (_r=0; _r<r; _r++) {
         if (_r == 0) {
-            printf("..+");
-            for (_c=1; _c<c; _c++) {
-                printf("-+");
-            }
-            printf("\n");
-            printf(".");
-            for (_c=0;_c<c;_c++) {
-                printf(".|");
-            }
-            printf("\n");
-            printf("+");
-            for (_c=0;_c<c; _c++) {
-                printf("-+");
-            }
-            printf("\n");
+					_buildInRow(c, "..+", "-+");
+					_buildInRow(c, "..|", ".|");
+					_buildInRow(c, "+-+", "-+");
         } else {
-            printf("|");
-            for (_c=0; _c<c; _c++) {
-                printf(".|");
-            }
-            printf("\n");
-            printf("+");
-            for (_c=0; _c<c; _c++) {
-                printf("-+");
-            }
-            printf("\n");
+					_buildInRow(c, "|.|", ".|");
+					_buildInRow(c, "+-+", "-+");
         }
     }
 }
