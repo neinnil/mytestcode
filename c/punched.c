@@ -19,12 +19,12 @@ void buildPunched(int r, int c)
     int _r, _c, i, j;
     for (_r=0; _r<r; _r++) {
         if (_r == 0) {
-					_buildInRow(c, "..+", "-+");
-					_buildInRow(c, "..|", ".|");
-					_buildInRow(c, "+-+", "-+");
+            _buildInRow(c, "..+", "-+");
+            _buildInRow(c, "..|", ".|");
+            _buildInRow(c, "+-+", "-+");
         } else {
-					_buildInRow(c, "|.|", ".|");
-					_buildInRow(c, "+-+", "-+");
+            _buildInRow(c, "|.|", ".|");
+            _buildInRow(c, "+-+", "-+");
         }
     }
 }
